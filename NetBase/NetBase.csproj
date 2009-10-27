@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{36091617-2E7B-41BC-A3C6-219488A6ED22}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetBase</RootNamespace>
+    <AssemblyName>NetBase</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api\DbfCommand.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Api\DbfConnection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Api\DbfDataReader.cs" />
+    <Compile Include="Sql\CreateTableQuery.cs" />
+    <Compile Include="Sql\InnerJoin.cs" />
+    <Compile Include="Sql\Join.cs" />
+    <Compile Include="Sql\OuterJoin.cs" />
+    <Compile Include="Sql\QuerySyntaxException.cs" />
+    <Compile Include="Executive\SqlUnsupportedException.cs" />
+    <Compile Include="Executive\Inserter.cs" />
+    <Compile Include="Executive\IRunnable.cs" />
+    <Compile Include="Executive\Selecter.cs" />
+    <Compile Include="Executive\TableCreater.cs" />
+    <Compile Include="Storage\BadDataException.cs" />
+    <Compile Include="Storage\Column.cs" />
+    <Compile Include="Storage\Database.cs" />
+    <Compile Include="Storage\InvalidDataTypeException.cs" />
+    <Compile Include="Storage\ITable.cs" />
+    <Compile Include="Sql\InsertQuery.cs" />
+    <Compile Include="Sql\IQuery.cs" />
+    <Compile Include="Storage\MemoryTable.cs" />
+    <Compile Include="Sql\SelectQuery.cs" />
+    <Compile Include="Sql\QueryBuilder.cs" />
+    <Compile Include="Sql\Set.cs" />
+    <Compile Include="Sql\Tokenizer.cs" />
+    <Compile Include="Sql\Where.cs" />
+    <Compile Include="Storage\Row.cs" />
+    <Compile Include="Storage\FileTable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Storage\TableHeader.cs" />
+    <Compile Include="Storage\TableSet.cs" />
+    <Compile Include="Storage\UnsupportedDataTypeException.cs" />
+    <Compile Include="Tests\Sql\Select.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="COPYING" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

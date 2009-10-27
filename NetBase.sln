@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C# Express 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetBase.Viewer", "View\NetBase.Viewer.csproj", "{D9D1057B-4B36-429D-B64D-64D5F3551AC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetBase", "NetBase\NetBase.csproj", "{36091617-2E7B-41BC-A3C6-219488A6ED22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9D1057B-4B36-429D-B64D-64D5F3551AC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9D1057B-4B36-429D-B64D-64D5F3551AC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9D1057B-4B36-429D-B64D-64D5F3551AC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9D1057B-4B36-429D-B64D-64D5F3551AC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36091617-2E7B-41BC-A3C6-219488A6ED22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36091617-2E7B-41BC-A3C6-219488A6ED22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36091617-2E7B-41BC-A3C6-219488A6ED22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36091617-2E7B-41BC-A3C6-219488A6ED22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = DBFRead.vsmdi
+	EndGlobalSection
+EndGlobal
