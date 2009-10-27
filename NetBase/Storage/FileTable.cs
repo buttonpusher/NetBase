@@ -159,8 +159,6 @@ namespace NetBase.Storage
                 bw.Close();
             }
 
-            // now immediately open the file
-            Open(filename);
         }
 
         // <summary>
